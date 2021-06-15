@@ -77,7 +77,7 @@ int ft_micro_print(char *filename)
 		ft_putstr_fd(1, "Error: Operation file corrupted\n");
 		return (1);
 	}
-	if (fscanf(f, "%d %d %c", &(mp.w), &(mp.h), &(mp.back)) < 0)
+	if (fscanf(f, "%d %d %c ", &(mp.w), &(mp.h), &(mp.back)) < 0)
 	{
 		ft_putstr_fd(1, "Error: Operation file corrupted\n");
 		return (1);
@@ -96,11 +96,11 @@ int ft_micro_print(char *filename)
 		i++;
 	}
 	ans[i] = NULL;
-	if (!ft_skip_space(f))
-	{
-		ft_putstr_fd(1, "Error: Operation file corrupted\n");
-		return (1);
-	}
+	// if (!ft_skip_space(f))
+	// {
+	// 	ft_putstr_fd(1, "Error: Operation file corrupted\n");
+	// 	return (1);
+	// }
 	if (fscanf(f, "%c %f %f %f %f %c", &(mp.R_r), &(mp.f_x), &(mp.f_y), &(mp.f_w), &(mp.f_h), &(mp.front)) < 0)
 	{
 		ft_putstr_fd(1, "Error: Operation file corrupted\n");
